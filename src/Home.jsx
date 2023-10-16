@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <div className='container-fluid' style={{height:'100vh'}}>
         <NavBar/>
-        <div className="status">
+        <div className="status d-flex align-items-center justify-content-center ">
           {
              openClose()
           }
