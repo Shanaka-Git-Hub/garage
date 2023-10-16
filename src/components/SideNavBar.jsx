@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import './SideNavBar.css'
 function SideNavBar() {
   const [show, setShow] = useState(false);
 
@@ -12,7 +13,7 @@ function SideNavBar() {
   return (
     <>
       <Button variant="dark" onClick={handleShow}
-      style={{position:'absolute',top:'10px',left:'15px'}}>
+      style={{position:'absolute',top:'10px',left:'15px'}} className='menu-btn'>
         <FontAwesomeIcon icon={faBars}/>
       </Button>
 

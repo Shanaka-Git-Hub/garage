@@ -8,3 +8,16 @@
   height:auto;
   min-height: 320px;
 }
+.card-outer{
+  width: 100%;
+  height:auto;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+@media screen and (max-width:900px) {
+  .card-outer{
+    flex-direction: column;
+  }
+}
