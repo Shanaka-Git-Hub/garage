@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const navigate=useNavigate()
 
   return (
     <>
@@ -23,8 +25,8 @@ function Login() {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
+          <Button variant="primary" onClick={()=>navigate('/garage/openclose')}>
+            Navigate
           </Button>
         </Modal.Footer>
       </Modal>
