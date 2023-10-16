@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 function SideNavBar() {
   const [show, setShow] = useState(false);
 
@@ -10,9 +11,9 @@ function SideNavBar() {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}
-      style={{position:'absolute',top:'10px',left:'10px'}}>
-        Launch
+      <Button variant="dark" onClick={handleShow}
+      style={{position:'absolute',top:'10px',left:'15px'}}>
+        <FontAwesomeIcon icon={faBars}/>
       </Button>
 
       <Offcanvas show={show} onHide={handleClose}>

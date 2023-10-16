@@ -8,7 +8,7 @@ function NavBar() {
       <Navbar bg="dark" data-bs-theme="dark">
         <Container>
           <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
+          <Nav className="me-auto"style={{display:'none'}}>
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#features">Services</Nav.Link>
             <Nav.Link href="#pricing">About</Nav.Link>
