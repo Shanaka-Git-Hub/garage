@@ -9,7 +9,7 @@ function NavBar() {
     <>
       <Navbar bg="dark" data-bs-theme="dark">
         <div className='main-header'>
-         <center><h2>Akila Service</h2></center> 
+         <center><h2>My Service</h2></center> 
         </div>
         <Container>
           <Navbar.Brand href="#home" ><span className='nav-header'>Navba</span>r</Navbar.Brand>

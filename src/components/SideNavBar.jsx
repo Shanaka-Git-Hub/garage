@@ -17,13 +17,19 @@ function SideNavBar() {
         <FontAwesomeIcon icon={faBars}/>
       </Button>
 
-      <Offcanvas show={show} onHide={handleClose}>
+      <Offcanvas show={show} onHide={handleClose} className='side-vav-bg'>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+          <Offcanvas.Title>My Service</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
+         <div className="side-nav">
+          <ul>
+            <li>Home</li>
+            <li>Services</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+         </div>
         </Offcanvas.Body>
       </Offcanvas>
     </>

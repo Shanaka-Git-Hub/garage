@@ -15,7 +15,7 @@ export default function App() {
         <SideNavBar/>
       <SideNavBar/>
       <CarouselOne/>
-      <div className="card-outer">
+      <div className="card-outer" id='card-outer'>
         <Cards/>
         <Cards/>
         <Cards/>
@@ -25,6 +25,9 @@ export default function App() {
          style={{border:'0'}} loading="lazy" referrerPolicy={'no-referrer-when-downgrade'}
          width={'100%'} height={'300px'}
          ></iframe>
+      </div>
+      <div className="footer">
+
       </div>
     </div>
   )
