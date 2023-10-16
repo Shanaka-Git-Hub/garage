@@ -1,17 +1,35 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './App.css'
 import NavBar from './components/NavBar'
 import CarouselOne from './components/CarouselOne'
 import SliderOne from './components/sliders/SliderOne'
 import SideNavBar from './components/SideNavBar'
 import Cards from './components/Cards'
-
+import './Home.css'
+import Open from './settings/Open'
+import Close from './settings/Close'
+import {useSelector } from 'react-redux'
 
 
 export default function Home() {
+  const status=useSelector(state=> state.status)
+  useEffect(()=>{
+    console.log(status);
+  },[status])
+  const openClose=()=>{
+    if(status){
+      return <Open/>
+    }
+    return <Close/>
+  }
   return (
     <div className='container-fluid' style={{height:'100vh'}}>
         <NavBar/>
+        <div className="status">
+          {
+             openClose()
+          }
+        </div>
         <SideNavBar/>
       <SideNavBar/>
       <CarouselOne/>
