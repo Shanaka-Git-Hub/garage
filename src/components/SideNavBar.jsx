@@ -4,6 +4,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import './SideNavBar.css'
+import Login from '../settings/Login';
 function SideNavBar() {
   const [show, setShow] = useState(false);
 
@@ -24,7 +25,7 @@ function SideNavBar() {
         <Offcanvas.Body>
          <div className="side-nav">
           <ul>
-            <li>Home</li>
+            <li><Login/></li>
             <li>Services</li>
             <li>About</li>
             <li>Contact</li>
