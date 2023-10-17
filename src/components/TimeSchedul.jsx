@@ -4,7 +4,7 @@ import './TimeSchedule.css'
 export default function TimeSchedul() {
   return (
     <div className='container-fluid d-flex align-items-center justify-content-around time-schedule' style={{height:'60vh'}}>
-       <table className='table table-hover w-75 ms-5 '>
+       <table className='table table-hover w-75'>
         <thead>
             <tr>
                 <th>Day</th>
