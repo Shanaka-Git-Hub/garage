@@ -3,7 +3,8 @@ import './TimeSchedule.css'
 
 export default function TimeSchedul() {
   return (
-    <div className='container-fluid d-flex align-items-center justify-content-around time-schedule' style={{height:'60vh'}}>
+    <div className='container-fluid d-flex align-items-center justify-content-around time-schedule' style={{mineight:'60vh',
+    height:'auto'}}>
        <table className='table table-hover w-75'>
         <thead>
             <tr>

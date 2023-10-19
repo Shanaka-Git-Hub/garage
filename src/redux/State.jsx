@@ -1,14 +1,12 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 
 const stateSlice=createSlice({
     name:'status',
-    initialState:false,
+     initialState:''
+    ,
     reducers:{
-        openNow:(state)=>{
-          return state=true
-        },
-        colseNow:(state)=>{
-          return state=false
+        openNow:(state,action)=>{
+          return state=action.payload
         }
     }
 })

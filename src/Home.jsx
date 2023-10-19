@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './App.css'
 import NavBar from './components/NavBar'
 import CarouselOne from './components/CarouselOne'
@@ -8,19 +8,33 @@ import Cards from './components/Cards'
 import './Home.css'
 import Open from './settings/Open'
 import Close from './settings/Close'
-import {useSelector } from 'react-redux'
+import {useSelector,useDispatch} from 'react-redux'
 import TimeSchedul from './components/TimeSchedul'
-
+import axios from 'axios'
+import { openNow } from './redux/State'
+import { ToastContainer, toast } from 'react-toastify'
 
 export default function Home() {
   const status=useSelector(state=> state.status)
-  useEffect(()=>{
-    console.log(status);
-  },[status])
+  const dispatch=useDispatch()
+
+  useEffect(() => {
+    axios({
+      url: 'https://coconut-heliotrope-microceratops.glitch.me/getStatus',
+      method: 'get',
+      headers: { _id: '6530c174e9faa87aca67d3a9' }
+    }).then(resp => {
+      dispatch(openNow(resp.data.msg[0].status))
+    }).catch(err => {
+      console.log(err);
+    })
+  }, [])
   const openClose=()=>{
-    if(status){
+    if(status=='open'){
+      //toast('Service Was Opened')
       return <Open/>
     }
+    //toast('Service Was Closed')
     return <Close/>
   }
   return (
@@ -49,6 +63,7 @@ export default function Home() {
       <div className="footer">
 
       </div>
+      <ToastContainer/>
     </div>
   )
 }
